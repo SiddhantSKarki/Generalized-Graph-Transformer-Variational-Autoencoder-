@@ -1,4 +1,4 @@
-# Project Title: Graph Transformer VAE for Link Prediction
+# Graph Transformer VAE for Link Prediction
 
 > **Quick note:** Replace all `TODO:` items and file paths with your actual assets. All media paths are relative to the repo root.
 
