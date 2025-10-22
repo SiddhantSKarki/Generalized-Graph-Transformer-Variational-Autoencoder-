@@ -168,12 +168,16 @@ If autoplay is desired (may be blocked):
 
 ### 3D t-SNE Latent Space
 
-> Export a static render and (optionally) an interactive HTML.
-
-**Static preview:**
+**Individual Class Preview:**
 
 <p align="center">
-  <img src="tsne_viz_3d.gif" width="75%" alt="3D t-SNE video (GIF)"/>
+  <img src="tsne_individual.gif" width="60%" alt="3D t-SNE video (GIF)"/>
+</p>
+
+**Overall Preview:**
+
+<p align="center">
+  <img src="tsne_viz_3d.gif" width="60%" alt="3D t-SNE video (GIF)"/>
 </p>
 
 **Interactive (Plotly HTML):**
