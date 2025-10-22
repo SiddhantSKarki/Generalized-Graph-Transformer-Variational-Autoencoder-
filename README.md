@@ -85,55 +85,27 @@ A **Graph Transformer VAE** (GT-VAE) for link prediction. The encoder uses an ad
 
 ```bash
 # 1) Setup
-conda env create -f env.yml  # TODO: provide env.yml
-conda activate gtn-vae
+
 
 # 2) Train
-python train.py \
-  --dataset cora \
-  --pos-enc laplacian --k-eigs 16 \
-  --encoder gtn --layers 4 --heads 8 --hidden 128 \
-  --beta 1.0 --batch-size 1 --epochs 400 \
-  --logdir runs/cora
 
 # 3) Evaluate
-python eval.py --checkpoint checkpoints/cora/best.pt
 
 # 4) Visualizations
-python viz/tsne_video.py --checkpoint checkpoints/cora/best.pt
-python viz/attention_maps.py --checkpoint checkpoints/cora/best.pt
-python viz/tsne3d.py --checkpoint checkpoints/cora/best.pt
+
 ```
 
-> **Tip:** Provide a minimal `scripts/download_data.sh` and `data/README.md` describing splits (RandomLinkSplit or custom) and seeds.
+> **TODO** Provide a minimal `scripts/download_data.sh` and `data/README.md` describing splits (RandomLinkSplit or custom) and seeds.
 
 ---
 
 ## Visualizations
 
-### t-SNE (2D) Videos
-
-> Place your rendered videos (or GIFs) in `assets/vis/tsne2d/`.
-
-**Embed MP4 (works via raw HTML in GitHub Markdown):**
-
-_<div align="center">
-  <video src="assets/vis/tsne2d/cora_tsne_epoch_sweep.mp4" width="75%" controls muted loop></video>
-</div>_
-
-If autoplay is desired (may be blocked):
-
-```html
-<video src="assets/vis/tsne2d/cora_tsne_epoch_sweep.mp4" width="75%" autoplay muted loop playsinline></video>
-```
-
-**GIF fallback:**
+### t-SNE (2D) visualization
 
 <p align="center">
-  <img src="assets/vis/tsne2d/cora_tsne_epoch_sweep.gif" width="75%" alt="2D t-SNE video (GIF)"/>
+  <img src="latent_tsne_2d_20251021_093826.png" width="75%" alt="2D t-SNE"/>
 </p>
-
-> **Naming suggestion:** `dataset_tsne_epoch_sweep.(mp4|gif)` or `dataset_tsne_classes.(mp4|gif)`.
 
 ---
 
