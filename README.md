@@ -36,7 +36,7 @@ A **Graph Transformer VAE** (GT-VAE) for link prediction. The encoder uses an ad
 ### High-level Diagram
 
 <p align="center">
-  <img src="assets/figs/architecture/gt_vae_architecture.png" alt="GT-VAE Architecture" width="85%"/>
+  <img src="encoder_decoder.drawio.png" alt="GT-VAE Architecture" width="85%"/>
 </p>
 
 **Figure 1.** *GT-VAE*: (1) **Input Embedding** combines node features and Laplacian positional encodings; (2) **Adjacency‑Masked Graph Transformer Encoder** produces (\mu,,\log\sigma^2); (3) **Reparameterization** samples (\mathbf{z}); (4) **Decoder** scores edge existence via inner product (or MLP) and outputs (\hat{A}).
