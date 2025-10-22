@@ -117,9 +117,9 @@ python viz/tsne3d.py --checkpoint checkpoints/cora/best.pt
 
 **Embed MP4 (works via raw HTML in GitHub Markdown):**
 
-<div align="center">
+_<div align="center">
   <video src="assets/vis/tsne2d/cora_tsne_epoch_sweep.mp4" width="75%" controls muted loop></video>
-</div>
+</div>_
 
 If autoplay is desired (may be blocked):
 
@@ -173,7 +173,7 @@ If autoplay is desired (may be blocked):
 **Static preview:**
 
 <p align="center">
-  <img src="assets/vis/tsne3d/cora_tsne3d.png" width="85%" alt="3D t-SNE latent space"/>
+  <img src="tsne_viz_3d.gif" width="75%" alt="3D t-SNE video (GIF)"/>
 </p>
 
 **Interactive (Plotly HTML):**
