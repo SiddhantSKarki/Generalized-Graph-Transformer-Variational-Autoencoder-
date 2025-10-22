@@ -152,24 +152,4 @@ A **Graph Transformer VAE** (GT-VAE) for link prediction. The encoder uses an ad
   <img src="tsne_viz_3d.gif" width="60%" alt="3D t-SNE video (GIF)"/>
 </p>
 
-**Interactive (Plotly HTML):**
-
-> GitHub does not render `.html` inline; link to the file and to a short screen capture.
-
-* Download the interactive file: [`assets/vis/tsne3d/cora_tsne3d.html`](assets/vis/tsne3d/cora_tsne3d.html)
-* Short demo video:
-
-<div align="center">
-  <video src="assets/vis/tsne3d/cora_tsne3d_demo.mp4" width="70%" controls muted loop></video>
-</div>
-
-**Optional iframe for GitHub Pages:** If you publish docs via GitHub Pages, embed the HTML interactively there and link to it:
-
-```html
-<!-- docs/tsne3d.html hosts the Plotly figure; add your site URL below -->
-<iframe
-  src="https://USER.github.io/REPO/docs/tsne3d.html"
-  width="100%" height="520" frameborder="0"></iframe>
-```
-
 ---
