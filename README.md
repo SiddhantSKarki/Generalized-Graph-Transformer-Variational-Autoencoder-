@@ -36,7 +36,7 @@ A **Graph Transformer VAE** (GT-VAE) for link prediction. The encoder uses an ad
 ### High-level Diagram
 
 <p align="center">
-  <img src="encoder_decoder.drawio.png" alt="GT-VAE Architecture" width="85%"/>
+  <img src="./assets/images/encoder_decoder.drawio.png" alt="GT-VAE Architecture" width="85%"/>
 </p>
 
 **Figure 1.** *GT-VAE*: (1) **Input Embedding** combines node features and Laplacian positional encodings; (2) **Adjacency‑Masked Graph Transformer Encoder** produces (\mu,,\log\sigma^2); (3) **Reparameterization** samples (\mathbf{z}); (4) **Decoder** scores edge existence via inner product (or MLP) and outputs (\hat{A}).
@@ -80,20 +80,22 @@ A **Graph Transformer VAE** (GT-VAE) for link prediction. The encoder uses an ad
 * **Generation:** sample (\mathbf{z}) node-wise and decode edges; optionally enforce degree/graph priors.
 
 ---
-
 ## Reproducing Results
 
 ```bash
-# 1) Setup
+# (optional) Create a virtual environment and install dependencies
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 
-
-# 2) Train
-
-# 3) Evaluate
-
-# 4) Visualizations
-
+# Run training (this is the single required command)
+python train.py
 ```
+
+Notes:
+- The default train.py run will perform training and save checkpoints/outputs.
+- Use `python train.py --help` to see available CLI options (config file, data paths, seed, etc.).
+- If present, use the repo's evaluation/visualization scripts on the produced checkpoints.
 
 > **TODO** Provide a minimal `scripts/download_data.sh` and `data/README.md` describing splits (RandomLinkSplit or custom) and seeds.
 
@@ -104,7 +106,7 @@ A **Graph Transformer VAE** (GT-VAE) for link prediction. The encoder uses an ad
 ### t-SNE (2D) visualization
 
 <p align="center">
-  <img src="latent_tsne_2d_20251021_093826.png" width="75%" alt="2D t-SNE"/>
+  <img src="./assets/images/latent_tsne_2d_20251021_093826.png" width="75%" alt="2D t-SNE"/>
 </p>
 
 ---
@@ -143,13 +145,13 @@ A **Graph Transformer VAE** (GT-VAE) for link prediction. The encoder uses an ad
 **Individual Class Preview:**
 
 <p align="center">
-  <img src="tsne_individual.gif" width="60%" alt="3D t-SNE video (GIF)"/>
+  <img src="./assets/gifs/tsne_individual.gif" width="60%" alt="3D t-SNE video (GIF)"/>
 </p>
 
 **Overall Preview:**
 
 <p align="center">
-  <img src="tsne_viz_3d.gif" width="60%" alt="3D t-SNE video (GIF)"/>
+  <img src="./assets/gifs/tsne_viz_3d.gif" width="60%" alt="3D t-SNE video (GIF)"/>
 </p>
 
 ---
